@@ -21,6 +21,16 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  cloud:
+    azure:
+      cosmos:
+        database: ${AZURE_COSMOS_DATABASE_NAME}
+
+azure:
+  cosmosdb:
+    uri: ${AZURE_COSMOS_ENDPOINT}
+    key: ${AZURE_COSMOS_KEY}
+    database: ${AZURE_COSMOS_DATABASE_NAME}
 
 management:
   endpoints:
