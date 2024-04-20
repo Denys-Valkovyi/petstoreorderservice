@@ -10,10 +10,6 @@ petstore:
   service:
     product:
       url: ${PETSTOREPRODUCTSERVICE_URL:http://localhost:8082}
-
-#azure:
-#  application-insights:
-#      instrumentation-key: ${PETSTORESERVICES_AI_INSTRUMENTATION_KEY}
       
 spring:
   application:
@@ -27,6 +23,8 @@ spring:
         database: ${AZURE_COSMOS_DATABASE_NAME}
 
 azure:
+  application-insights:
+    instrumentation-key: ${PETSTORESERVICES_AI_INSTRUMENTATION_KEY}
   cosmosdb:
     uri: ${AZURE_COSMOS_ENDPOINT}
     key: ${AZURE_COSMOS_KEY}
